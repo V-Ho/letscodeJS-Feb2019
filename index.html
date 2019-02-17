@@ -1,0 +1,44 @@
+<!DOCTYPE html>
+<html>
+<head>
+  <meta charset="utf-8">
+  <title>Javascripting</title>
+  <link rel="stylesheet" type="text/css" href=https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/css/bootstrap.min.css>
+</head>
+<body>
+  <div class="jumbotron text-center" id="banner">
+    <h1>Let's Code Together now!</h1>
+    <button onclick="changeText()" class="btn btn-primary">Change this Text</button>
+    <button onclick="changeTextBack()"class="btn btn-success">Change Text Again</button>
+  </div>
+
+
+  <div class="jumbotron text-center">
+    <h1 id="date-banner">What is the date?</h1>
+    <button onclick="getDate()" class="btn btn-success">Date</button>
+  </div>
+
+  <div class="jumbotron text-center">
+    <h1>Random Text</h1>
+  </div>
+
+  <script>
+  // All the Javascript goes here
+
+  /* 1) Define function that changes html element
+     2) Add event listeners to HTL elements (above that call the function
+  */
+  function changeText() {
+    document.querySelector('h1').innerText = 'We are changing the text!'
+  }
+
+  function changeTextBack() {
+    document.querySelector('h1').innerText = 'Change the text with another Button'
+  }
+
+  function getDate() {
+    document.getElementById('date-banner').innerText = Date()
+  }
+  </script>
+</body>
+</html>
